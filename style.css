@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 1%;
+    justify-content: space-between;    
+    background-color: #000;
+}
+
+.logo-menu{
+    width: 6rem;
+    height: 6rem;
+}
+
+.menu{
+    width: 30%;
+    display: flex;
+    
+}
+
+.menu-btn{
+    width: 50%;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.inicio{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+}
+
+.apresentation{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.logo-apresentation{
+    width: 50%;
+    border-radius: 1rem;
+    -webkit-box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+    -moz-box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+    box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+}
+
+.apresentation-content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 0.5%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5%;
+    font-size: 2rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem 4rem ;
+    -webkit-box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+    -moz-box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+    box-shadow: -20px 22px 33px -1px rgba(0,0,0,0.47);
+}
+
+.projects{
+    background-color: #000;
+    border-radius: 3rem 2rem;
+    display: flex;
+    height: 35rem;
+}
+
+.Pdesc,.Plogo{
+    width: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Pdesc-text{
+    width: 90%;
+    height: 20rem;
+    border: 2px solid #fff;
+    border-radius: 1rem 4rem;
+    padding: 1%;
+}
+
+.Pdesc-title{
+    font-size: 3rem;
+}
+
+.lovelace-logo{
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.quemSomos{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+.quemSomos-title{
+    background-color: #fff;
+    color: #000;
+    padding: 2%;
+}
+
+.first-persons,.second-persons{
+    width: 100%;
+    display: flex;
+    gap: 1%;
+}
+
+.card{
+    width: 30%;
+    padding: 1%;
+    background-color: #000;
+    border-radius: 1rem;
+    display: flex;
+    gap: 3%;
+    color: #fff;
+}
+
+.card-img{
+    width: 40%;
+    height: fit-content;
+    border-radius: 1rem;
+}
+
+.card-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.card-title{
+    font-size: 1.3rem;
+}
+
+.insta, .linkedin, .twitter,.gitHub{
+    width: 20%;
+}
+
+
+@media screen and (max-width: 460px) {
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .header {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .menu{
+       display: none;
+    }
+
+    .inicio{
+        background-image: none;
+        width: 100vw;
+    }
+
+    .apresentation{
+    display: none;
+    }
+
+    .apresentation-content{
+        width: 98%;
+    }
+
+    .text{
+        font-size: 1rem;
+    }
+
+    .projects{
+        height: 50rem;
+        flex-direction: column-reverse;
+        gap: 5%;
+        padding: 1%;
+        justify-content: center;
+    }
+    
+    .Pdesc,.Plogo{
+        width: 100vw;
+        height: 25rem;
+        display: block;
+    }
+
+    .Plogo{
+       margin-top: 5%;
+    }
+
+
+    .lovelace-logo{
+        width: 100%;
+    }
+
+    .card{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .card-img{
+        width: 40%;
+    }
+
+    .first-persons,.second-persons{
+        flex-direction: column;
+    }
+    
+}
