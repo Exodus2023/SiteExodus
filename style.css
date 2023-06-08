@@ -88,35 +88,49 @@ body{
 
 .projects{
     width: 98%;
+    height: 35rem;
     background-color: #000;
     border-radius: 3rem 2rem;
-    display: flex;
-    height: 35rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 90% 90%;
+}
+
+.projects-title{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 5%;
+    height: 1rem;
+    color: #fff;
 }
 
 .Pdesc,.Plogo{
-    width: 50%;
     color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     }
 
+.Pdesc{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
 
 .Plogo{
-    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 
-.projects-title{
-    width: 100%;
-    margin: 1.8rem;
-    margin-bottom: 1.1rem;
-    padding-left: 10%;
-}
-
-
-.Pdesc-text{
+.Pdesc-content{
     margin: 5%;
     width: 90%;
     height: 20rem;
@@ -192,6 +206,20 @@ body{
     width: 100%;
     height: 10rem;
     background-color: #000;
+}
+
+@media screen and (max-width: 880px){
+    .logo-apresentation{
+        width: 100%;
+    }
+    
+    .lovelace-logo{
+        width: 92%;
+    }
+
+    .Pdesc-content{
+        height: 17rem;
+    }
 }
 
 @media screen and (max-width: 460px) {
