@@ -5,7 +5,6 @@ projectDes.append(projectText)
 
 var width = window.innerWidth
 
-alert("tamanho = " + width)
 
 
 
