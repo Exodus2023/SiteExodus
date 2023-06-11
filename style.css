@@ -156,7 +156,7 @@ body{
     height: 35rem;
     display: flex;
     flex-direction: column;
-    gap: 1%;
+    gap: .5rem;
 }
 
 .quemSomos-title{
@@ -172,40 +172,76 @@ body{
     gap: 1%;
 }
 
-.card{
+.card, .victor-card,.estrela-card, .aquino-card{
     width: 30%;
     height: 12rem;
     padding: 1%;
     background-color: #000;
     border-radius: 1rem;
-    display: flex;
-    gap: 3%;
+    display: grid;
+    grid-template-columns: 48% 50% 50%;
+    grid-template-rows: 8.5rem 3rem;
+    column-gap: 3%;
+    row-gap: 3%;
     color: #fff;
 }
 
-.card-img{
-    height: 11rem;
+.card-img, .victor-img, .estrela-img,.aquino-img{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
     border-radius: 1rem;
 }
 
-.card-desc{
+.victor-card, .estrela-card{
+    grid-template-columns: 37%;
+}
+
+.aquino-card{
+    grid-template-columns: 30%;
+}
+
+.victor-img, .estrela-img, .aquino-img{
+    height: 12rem;
+}
+
+.card-desc, .exodus-desc{
+    grid-row-start: 1;
+    grid-row-end: 1;
     display: flex;
     flex-direction: column;
     gap: 5%;
+    border-bottom: 2px solid #fff;
+}
+
+.exodus-desc{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-bottom: none;
+}
+
+.social{
+    grid-column-start: 2;
 }
 
 .card-title{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .insta, .linkedin,.gitHub{
-    width: 20%;
+    height: 3rem;
 }
 
 .ultimo{
     width: 100%;
-    height: 10rem;
+    height: 6rem;
     background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 880px){
@@ -220,6 +256,15 @@ body{
     .Pdesc-content{
         height: 17rem;
     }
+
+    .card-desc{
+        font-size: .6rem;
+    }
+
+    .insta, .linkedin,.gitHub{
+        width: 45%;
+    }
+
 }
 
 @media screen and (max-width: 460px) {
@@ -256,38 +301,74 @@ body{
 
     .projects{
         height: 50rem;
-        flex-direction: column-reverse;
-        gap: 5%;
-        padding: 1%;
-        justify-content: center;
+        grid-template-rows: 5rem;
+        text-align: center;
     }
     
-    .Pdesc,.Plogo{
-        width: 100vw;
-        height: 25rem;
-        display: block;
+    .projects-title{
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
-
+    
     .Plogo{
-       margin-top: 5%;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .lovelace-logo{
+        width: 90%;
     }
 
+    .Pdesc{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }   
 
-    .lovelace-logo{
-        width: 100%;
-    }
-
-    .card{
-        width: 100%;
-        margin-bottom: 2%;
-    }
-
-    .card-img{
-        width: 40%;
+    .quemSomos{
+        height: 73rem;
+        gap: 0.01rem;
     }
 
     .first-persons,.second-persons{
         flex-direction: column;
+        height: 46rem;
+        padding: 1%;
     }
-    
+
+    .card,.victor-card, .estrela-card, .aquino-card {
+        width: 95%;
+        height: 10.8rem;
+        grid-template-columns: 50% 45% 45%;
+        grid-template-rows: 7rem 2rem;
+        padding: 1%;
+    }
+
+    .victor-card, .estrela-card{
+        grid-template-columns: 42%;
+    }
+
+    .aquino-card{
+        grid-template-columns: 35%;
+    }
+
+    .victor-img, .estrela-img, .aquino-img{
+        height: 10.7rem;
+    }
+
+    .card-img{
+        width: 100%;
+    }
+
+    .card-desc{
+        height: 7rem;
+        font-size: medium;
+    }
+
+    .insta, .linkedin,.gitHub{
+        width: 30%;
+    } 
 }
